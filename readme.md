@@ -15,7 +15,7 @@ Here thing/s you need
 		- E153u-2
 - [Huawei mobile partner](http://huawei-mobile-partner.software.informer.com/download/)
 	- This serves as the main driver for the dongle.
-		1. Install the Huawei Mobile Partner then check if has opened a COMPort in Device Manager
+		1. Install the Huawei Mobile Partner then check if it has opened a COMPort in Device Manager
 		2. You need to close the apllication once installed because it will result conflict. You only need the driver & not application.
 
 ## People to blame
@@ -40,5 +40,6 @@ Solution structure:
 	- The entities or objects of the project
 - PERI.SMS.TEST
 	- The Unit Test project
+	- Sample codes are available here
 - PERI.SMS.XU
 	- The XUnit project for extended testing		
