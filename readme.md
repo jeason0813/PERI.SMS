@@ -1,6 +1,6 @@
 # PERI.SMS
 
-A simple SMS library for sending & receiving text messages using COMPort
+A simple SMS library for sending & receiving text messages using dongle
 
 ## Getting Started
 
