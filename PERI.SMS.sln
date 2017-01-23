@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PERI.SMS.Core", "PERI.SMS.Core\PERI.SMS.Core.csproj", "{9FD58716-ACC7-4383-A3DA-9BDBC3384251}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PERI.SMS.Model", "PERI.SMS.Model\PERI.SMS.Model.csproj", "{24A19879-2487-46EF-8DF3-D329A766E1A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PERI.SMS.TEST", "PERI.SMS.TEST\PERI.SMS.TEST.csproj", "{C19DFA30-14A8-47BE-9707-05E2E3C067D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PERI.SMS.XU", "PERI.SMS.XU\PERI.SMS.XU.csproj", "{0BB0101E-69ED-4517-845E-21BAB01DE2D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FD58716-ACC7-4383-A3DA-9BDBC3384251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FD58716-ACC7-4383-A3DA-9BDBC3384251}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FD58716-ACC7-4383-A3DA-9BDBC3384251}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FD58716-ACC7-4383-A3DA-9BDBC3384251}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24A19879-2487-46EF-8DF3-D329A766E1A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24A19879-2487-46EF-8DF3-D329A766E1A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24A19879-2487-46EF-8DF3-D329A766E1A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24A19879-2487-46EF-8DF3-D329A766E1A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C19DFA30-14A8-47BE-9707-05E2E3C067D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C19DFA30-14A8-47BE-9707-05E2E3C067D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C19DFA30-14A8-47BE-9707-05E2E3C067D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C19DFA30-14A8-47BE-9707-05E2E3C067D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BB0101E-69ED-4517-845E-21BAB01DE2D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BB0101E-69ED-4517-845E-21BAB01DE2D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BB0101E-69ED-4517-845E-21BAB01DE2D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BB0101E-69ED-4517-845E-21BAB01DE2D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
