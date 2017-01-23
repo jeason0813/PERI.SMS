@@ -1,37 +1,44 @@
-# GHL.PaymentSolutions WebUi
+# PERI.SMS
 
-The purpose of this project is to provide a generic web UI for GHL.PaymentSolutions.
+A simple SMS library for sending & receiving text messages using COMPort
 
-You may need to understand the nature of MVC before going through the entire solution. Because of abstraction and frequent changing of schema, we choose MVC, for it suits best.
+## Getting Started
+
+### Prerequisites
+
+Here thing/s you need
+
+- [Visual Studio](https://www.visualstudio.com/)
+- Huawei mobile dongle
+	- Tested on the ff models:
+		- E303
+		- E153u-2
+- [Huawei mobile partner](http://huawei-mobile-partner.software.informer.com/download/)
+	- This serves as the main driver for the dongle.
+		1. Install the Huawei Mobile Partner then check if has opened a COMPort in Device Manager
+		2. You need to close the apllication once installed because it will result conflict. You only need the driver & not application.
 
 ## People to blame
 
 The following personnel are responsible for managing this project.
-- Alvin.Chua@ghl.com
+- [actchua@periapsys.com](mailto:actchua@periapsys.com)
 
 ## Developer's Guide
-Here are some facts:
-- Design pattern: **MVC5** (.Net framework 4.6.1)
-- Uses **EntityFramework 6** for data manipulation
-- UI uses the default **GHL template** though some css/scripts were heavily modified
-- Most UI manipulations were done by **JQuery/BootStrap**
-- Uses **Nlog** for logging series of events
+
+The project uses the ff. technology:
+- .Net framework 4.5
 
 Solution structure:
-- ```GHL.PaymentSolutions.WebUi.Core```
-	- Contains the common methods and functions of the system
-- ```GHL.PaymentSolutions.WebUi.EF```
-	- Contains the EntityFramework module
-	- All of the data-manipulations were done here
-- ```GHL.PaymentSolutionsWebUi.Mvc```
-	- This is the main project.
-- ```GHL.PaymentSolutions.WebUi.Mvc.Bll```
-	- Contains the POCO classes used by the main project
-- ```GHL.PaymentSolutions.WebUi.Mvc.Test```
-	- UnitTest project
-- ```GHL.PaymentSolutions.WebUi.Mvc.XU```
-	- Xunit ~ for extended unit testing
 
-## Want to help?
-
-If you've found a problem, or want a feature, or have any suggestions or criticisms, please file a GitHL issue.
+- PERI.SMS.Core
+	- The main project
+		- COMPort
+			- Contains the COMPort functionalies(read, response, etc.) 
+        - SMS
+        	- Send/Recieve
+- PERI.SMS.Model
+	- The entities or objects of the project
+- PERI.SMS.TEST
+	- The Unit Test project
+- PERI.SMS.XU
+	- The XUnit project for extended testing		
