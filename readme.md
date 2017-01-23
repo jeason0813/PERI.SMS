@@ -43,3 +43,7 @@ Solution structure:
 	- Sample codes are available here
 - PERI.SMS.XU
 	- The XUnit project for extended testing		
+	
+## Releases
+
+Download release packages [here](https://perisms.codeplex.com/releases/)
