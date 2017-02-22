@@ -26,14 +26,27 @@ namespace PERI.SMS.Core
         /// <returns>bool - Yes/No(Success)</returns>
         public static bool Send(SerialPort port, string mobile, string message)
         {
-            string recievedData = COMPort.ExecuteATCommand(port, "AT", 300, "No phone connected");
-            recievedData = COMPort.ExecuteATCommand(port, "AT+CMGF=1", 300, "Failed to set message format.");
-            String command = "AT+CMGS=\"" + mobile + "\"";
-            recievedData = COMPort.ExecuteATCommand(port, command, 300, "Failed to accept phoneNo");
-            command = message + char.ConvertFromUtf32(26) + "\r";
-            recievedData = COMPort.ExecuteATCommand(port, command, 3000, "Failed to send message");
+            try
+            {
+                string recievedData = COMPort.ExecuteATCommand(port, "AT", 300, "No phone connected");
+                recievedData = COMPort.ExecuteATCommand(port, "AT+CMGF=1", 300, "Failed to set message format.");
+                String command = "AT+CMGS=\"" + mobile + "\"";
+                recievedData = COMPort.ExecuteATCommand(port, command, 300, "Failed to accept phoneNo");
+                command = message + char.ConvertFromUtf32(26) + "\r";
+                recievedData = COMPort.ExecuteATCommand(port, command, 3000, "Failed to send message");
 
-            return (recievedData.EndsWith("\r\nOK\r\n"));
+                return (recievedData.EndsWith("\r\nOK\r\n"));
+            }
+            catch (ApplicationException ex)
+            {
+                // Garbled response
+                // Not enough balance or SIM is deactivated
+                return false;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
 
         /// <summary>
@@ -134,12 +147,24 @@ namespace PERI.SMS.Core
             /// <returns>bool</returns>
             public static bool All(SerialPort port)
             {
-                string recievedData = COMPort.ExecuteATCommand(port, "AT", 300, "No phone connected");
-                recievedData = COMPort.ExecuteATCommand(port, "AT+CMGF=1", 300, "Failed to set message format.");
-                String command = "AT+CMGD=1,4";
-                recievedData = COMPort.ExecuteATCommand(port, command, 300, "Failed to delete message");
+                try
+                {
+                    string recievedData = COMPort.ExecuteATCommand(port, "AT", 300, "No phone connected");
+                    recievedData = COMPort.ExecuteATCommand(port, "AT+CMGF=1", 300, "Failed to set message format.");
+                    String command = "AT+CMGD=1,4";
+                    recievedData = COMPort.ExecuteATCommand(port, command, 300, "Failed to delete message");
 
-                return (recievedData.EndsWith("\r\nOK\r\n"));
+                    return (recievedData.EndsWith("\r\nOK\r\n"));
+                }
+                catch (ApplicationException ex)
+                {
+                    // Garbled response
+                    return false;
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
             }
 
             /// <summary>
@@ -149,12 +174,24 @@ namespace PERI.SMS.Core
             /// <returns>bool</returns>
             public static bool AllRead(SerialPort port)
             {
-                string recievedData = COMPort.ExecuteATCommand(port, "AT", 300, "No phone connected");
-                recievedData = COMPort.ExecuteATCommand(port, "AT+CMGF=1", 300, "Failed to set message format.");
-                String command = "AT+CMGD=1,3";
-                recievedData = COMPort.ExecuteATCommand(port, command, 300, "Failed to delete message");
+                try
+                {
+                    string recievedData = COMPort.ExecuteATCommand(port, "AT", 300, "No phone connected");
+                    recievedData = COMPort.ExecuteATCommand(port, "AT+CMGF=1", 300, "Failed to set message format.");
+                    String command = "AT+CMGD=1,3";
+                    recievedData = COMPort.ExecuteATCommand(port, command, 300, "Failed to delete message");
 
-                return (recievedData.EndsWith("\r\nOK\r\n"));
+                    return (recievedData.EndsWith("\r\nOK\r\n"));
+                }
+                catch (ApplicationException ex)
+                {
+                    // Garbled response
+                    return false;
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
             }
         }
     }
